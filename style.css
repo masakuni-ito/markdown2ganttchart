@@ -1,0 +1,63 @@
+/* 基本スタイル */
+.table {
+    display: table;
+    width: 100%;
+    table-layout: auto; /* 'fixed'から'auto'に変更 */
+    border-collapse: collapse;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* タスク名のセル */
+.cell.task-name {
+    /* 幅をパーセンテージから固定値または小さいパーセンテージに変更 */
+    width: 200px; /* 例: 200px */
+    background-color: #e6e6ff; /* 藤色の薄いバージョン */
+    text-align: left;
+    overflow: hidden; /* 長いテキストを隠す */
+    text-overflow: ellipsis; /* テキストがオーバーフローした時に省略記号を表示 */
+}
+
+/* ハイライト（タスク期間） */
+.highlight {
+    background-color: #b3b3ff; /* 藤色より少し濃い */
+}
+
+/* トップレベルのタスク */
+.cell.top-level {
+    background-color: #ccccff; /* 藤色 */
+}
+
+/* トップレベルのタスクのハイライト */
+.cell.top-level-highlight {
+    background-color: #9999ff; /* 藤色よりさらに濃い */
+}
+
+/* インデント */
+.indent-1 {
+    padding-left: 20px;
+}
+
+.indent-2 {
+    padding-left: 40px;
+}
+
+/* 月曜日を示す赤い縦線 */
+.monday-cell {
+    border-left: 2px solid #666;
+}
+
